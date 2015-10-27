@@ -1,0 +1,19 @@
+{
+    "name": "yihe/weather_dashboard_yihe",
+    "description": "Weather Dashboard for Aquafadas",
+    "keywords": ["weather","current","dashboard"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yihe Wang",
+            "email": "tinayihe39@gmail.com"
+        }
+    ],
+    "require": { //dépendance, installer automatiquement
+        "php": ">=5.3.0",
+        "slim/slim": "2.*"
+    },
+    "autoload": { //charger des fichiers PHP en amont
+        "classmap": ["lib/"]
+    }
+}

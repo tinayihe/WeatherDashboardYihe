@@ -1,0 +1,22 @@
+<h4 id="searchNewCity">Search a new city</h4>
+<div class="row search_body" id="search">
+	<div class="nine columns">
+		<input class="u-full-width" type="text" placeholder="enter name of city" id="searchInput" ng-model="cityToSearch.q" ng-keypress="submitSearch($event)">
+	</div>
+	<div class="three columns">
+		<button class="button-primary u-full-width" id="searchBtn" ng-click="searchCity()">Search</button>
+	</div>
+</div>
+<h5 id="addCity" ng-show="showSearchMsg">{{ searchMsg }}</h5>
+<div class="row search_body" id="cities_list_wrapper">
+	<ul class="u-full-width" id="cities_list">
+		<li ng-repeat="result in searchResults.list" ng-click="addCity(result)">{{ result.name }}, {{ result.sys.country }}</li>
+	</ul>
+</div>
+
+<h4 id="deleteCities">Click on a city to delete</h4>
+<div class="container">
+	<div class="row" id="cityToDeleteWrapper">
+		<div class="one-third column" ng-repeat="city in cities" id="cityToDelete" ng-click="deleteCity(city)">{{ city.city_name }}</div>
+	</div>
+</div>

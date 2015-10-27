@@ -1,0 +1,15 @@
+<div class="container">
+	    <div class="four columns" id="city" ng-repeat="city in cities">
+	    	<div class="container">
+	    		<div class="row">
+	    			<div class="one-third column">
+		    		<i class="wi wi-owm-{{ city.weather.id }}"></i>
+		    		</div>
+		    		<div class="two-thirds column" id="temp">{{ city.temp }}&ordm;C
+		    		</div>
+	    		</div>
+		    	
+		    	<h4 class="value-heading">{{ city.city_name }}</h4>
+	    	</div>
+	  	</div>
+</div>

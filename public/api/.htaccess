@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+
+# réécriture de URL
+# Sinon api/index.php/route
+# api/route
+# documentation Slim
